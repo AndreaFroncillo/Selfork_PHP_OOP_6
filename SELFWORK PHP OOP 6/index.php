@@ -1,32 +1,6 @@
 <?php
 
-abstract class Categoria{
-    abstract public function getMyCategory();
-}
-
-class Attualità extends Categoria{
-    public function getMyCategory(){
-        echo "Attualità \n";
-    }
-}
-
-class Sport extends Categoria{
-    public function getMyCategory(){
-        echo "Sport \n";
-    }
-}
-
-class Gossip extends Categoria{
-    public function getMyCategory(){
-        echo "Gossip \n";
-    }
-}
-
-class Storia extends Categoria{
-    public function getMyCategory(){
-        echo "Storia \n";
-    }
-}
+require_once('class.php');
 
 
 class Post{
