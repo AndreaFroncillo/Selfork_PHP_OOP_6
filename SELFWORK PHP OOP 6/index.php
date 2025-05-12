@@ -4,52 +4,33 @@ require_once('class.php');
 
 
 class Post{
-    public $titolo;
-    public $categoria;
-    public $tag;
+    private $titolo;
+    private $categoria;
+    private $tag;
 
-    public function __construct(Categoria $_titolo, Categoria $_categoria, Categoria $_tag){
+    public function __construct($_titolo, Category $_categoria, $_tag){
         $this->titolo = $_titolo;
         $this->categoria = $_categoria;
         $this->tag = $_tag;
     }
 
-    public function title(){
-        echo "\n\n\n\n\n TITOLO ";
-        $this->titolo->getMyCategory();
-        
+    public function getTitle(){
+        return $this->titolo;
+    }
+
+    public function getCategory(){
+        return $this->categoria->getMyCategory();
         
     }
 
-    public function category(){
-        echo "\n CATEGORIA ";
-        $this->categoria->getMyCategory();
-        
-    }
-
-    public function tag(){
-        echo "\n TAG ";
-        $this->tag->getMyCategory();
+    public function getTag(){
+        return $this->tag;
     }
 
 }
 
-$attualità = new Post(new Attualità, new Attualità, new Attualità);
-$attualità->title();
-$attualità->category();
-$attualità->tag();
+$post = new Post("Titolo", new Attualità(), "tag 1");
+$post2 = new Post("Titolo 2", new Gossip(), "tag 2");
 
-$sport = new Post(new Sport, new Sport, new Sport);
-$sport->title();
-$sport->category();
-$sport->tag(); 
-
-$gossip = new Post(new Gossip, new Gossip, new Gossip);
-$gossip->title();
-$gossip->category();
-$gossip->tag();
-
-$storia = new Post(new Storia, new Storia, new Storia);
-$storia->title();
-$storia->category();
-$storia->tag();
+echo $post->getCategory();
+echo $post2->getTitle();

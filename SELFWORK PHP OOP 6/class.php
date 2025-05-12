@@ -29,13 +29,13 @@ class Storia extends Category{
 }
 
 $attualità = new Attualità;
-$attualità->getMyCategory();
+/* $attualità->getMyCategory(); */
 
 $sport = new Sport;
-$sport->getMyCategory();
+/* $sport->getMyCategory(); */
 
 $gossip = new Gossip;
-$gossip->getMyCategory();
+/* $gossip->getMyCategory(); */
 
 $storia = new Storia;
-$storia->getMyCategory();
+/* $storia->getMyCategory(); */
