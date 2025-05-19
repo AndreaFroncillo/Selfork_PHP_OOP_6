@@ -6,25 +6,25 @@ abstract class Category{
 
 class Attualità extends Category{
     public function getMyCategory(){
-        echo "Attualità \n";
+        return "Attualità";
     }
 }
 
 class Sport extends Category{
     public function getMyCategory(){
-        echo "Sport \n";
+        return "Sport";
     }
 }
 
 class Gossip extends Category{
     public function getMyCategory(){
-        echo "Gossip \n";
+        return "Gossip";
     }
 }
 
 class Storia extends Category{
     public function getMyCategory(){
-        echo "Storia \n";
+        return "Storia";
     }
 }
 

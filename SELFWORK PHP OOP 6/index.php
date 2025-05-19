@@ -27,10 +27,17 @@ class Post{
         return $this->tag;
     }
 
+    public function articolo(){
+        return "Titolo: " . $this->getTitle() . "\n" .
+               "Categoria: " . $this->getCategory() . "\n" .
+               "Tag: " . $this->getTag() . "\n";
+    }
+    
+
 }
 
 $post = new Post("Titolo", new Attualità(), "tag 1");
 $post2 = new Post("Titolo 2", new Gossip(), "tag 2");
 
-echo $post->getCategory();
-echo $post2->getTitle();
+echo $post->articolo();
+echo $post2->articolo();
